@@ -119,3 +119,11 @@ RUN set -eux; \
 	fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; \
 	javac --version; \
 	java --version
+
+# Install gradle
+ENV GRADLE_VERSION 7.2
+ENV GRADLE_HOME /gradle-$GRADLE_VERSION
+ENV PATH ${PATH}:$GRADLE_HOME/bin
+RUN wget https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip && \
+    unzip gradle-$GRADLE_VERSION-bin.zip && \
+    rm -f gradle-$GRADLE_VERSION-bin.zip
