@@ -4,6 +4,7 @@ RUN set -eux; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
     		dirmngr \
+    		unzip \
     		gnupg \
     		wget \
 		ca-certificates p11-kit \
