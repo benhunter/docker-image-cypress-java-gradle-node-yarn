@@ -1,9 +1,23 @@
-# docker-java-gradle-node-yarn
+# docker-java-gradle-node-yarn-cypress
 
-Docker build here:
-## Versions
+## Motivation
+Building Single Page Application's (SPA) using the following tech stack:
+- Java/Spring
+- React/Typescript
+- Cypress
+- Gradle
 
-Gradle: 7.2
-Node: 16.14.0
-Yarn: 1.22.4
-Java: 11.0.14.1
+I needed the ability to run my cypress journey tests in the pipeline for a gradle based app.
+
+## Solution
+Staring with a cypress browser image, this docker file installs image dependencies, cypress, yarn,
+java and gradle on top
+
+Dockerhub Location: TBD
+
+## Tech Stack Versions
+- Gradle: 7.2
+- Node: 16.14.0
+- Yarn: 1.22.4
+- Java: 11.0.14.1
+- Cypress: 9.5.3
